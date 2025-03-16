@@ -4,8 +4,8 @@ import java.util.Scanner;
 
 public class Lab03_Q1 {
     public static void main(String[] args) {
-        String aliceCoordinates, bobCoordinates;
-        int aliceX, aliceY, bobX, bobY; //inputs
+        String aliceCoordinates, bobCoordinates;//inputs
+        int aliceX, aliceY, bobX, bobY; 
         double distance; //output
 
         Scanner input = new Scanner(System.in);

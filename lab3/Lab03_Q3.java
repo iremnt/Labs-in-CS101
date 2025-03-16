@@ -21,7 +21,7 @@ public class Lab03_Q3 {
         if (admin.equals(userName + "#" + password)){
             System.out.print("Welcome! Your role is Admin.\n1- Add Movie\n2- Delete Movie\n3- Logout\nSelect an operation: ");
             selected = input.nextInt();
-            addDeleteMovieReview = input.nextLine();// to not end the programme
+            input.nextLine();// to not end the programme
 
             if (selected == 1){
                 System.out.print("Enter movie name to add: ");
@@ -55,7 +55,9 @@ public class Lab03_Q3 {
             }
             else if (selected == 3){
                 System.out.println("Logged out successfully");
-            }//maybe adding there is no selection in else case
+            }
+            else
+                System.out.println("wrong choice selected");
         }
         //users part
         else if(users.contains(userName + "#" + password)){
@@ -83,7 +85,9 @@ public class Lab03_Q3 {
             }
             else if (selected == 3){
                 System.out.println("Logged out successfully");
-            }//maybe adding there is no selection for else case
+            }
+            else
+                System.out.println("wrong choice selected");
         }
         else //non user nor admin
             System.out.println("You shall not pass!");

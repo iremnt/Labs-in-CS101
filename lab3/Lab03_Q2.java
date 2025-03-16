@@ -28,9 +28,10 @@ public class Lab03_Q2 {
         paperNumber = input.nextInt();
         System.out.print("Number of failed courses: ");
         failedNumber = input.nextInt();
+        input.nextLine();
         System.out.print("Bilkent professor's score: ");
-        prof = input.next();
-        if (!(prof.equals("N/A"))){//empty?
+        prof = input.nextLine();
+        if (!(prof.equals(""))){//empty?
             profScore = Integer.parseInt(prof);//to int
             totalPoints += profScore * 30;//add score
             if (profScore < PROF_LIM)//eligible?

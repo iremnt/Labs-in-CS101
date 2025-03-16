@@ -28,7 +28,7 @@ public class Lab01_Q1
 		
 		/* now calculate debt if they choose to repay with suspension*/
 		int hoursOfPrisonTimePerMovie = 900;
-		System.out.println("They can either choose to pay this or the company license will be suspended" + hoursOfPrisonTimePerMovie + " hours for every movie pirated.");
+		System.out.println("They can either choose to pay this or the company license will be suspended " + hoursOfPrisonTimePerMovie + " hours for every movie pirated.");
 		
 		int totalHours = hoursOfPrisonTimePerMovie * noOfPiratedMovies; //changing double with int
 		

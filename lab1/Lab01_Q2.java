@@ -7,7 +7,5 @@ public class Lab01_Q2 {
         x = -5;
         y = (int)((Math.pow(x,3) + Math.abs(x) + 9) / Math.pow(x, 2));
         System.out.println(y);
-    
     }
-
 }

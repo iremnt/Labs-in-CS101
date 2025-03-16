@@ -8,17 +8,20 @@ public class Lab04_Q1 {
         int randomNumber, usersGuess;
         boolean guessed = false;
 
+        //make a random number between 
         Random random = new Random();
-        randomNumber = random.nextInt(101);
+        randomNumber = random.nextInt(101);//including 0 excluding 101
+
         while(!guessed){
             Scanner input = new Scanner(System.in);
             System.out.print("Guess the number: ");
             usersGuess = input.nextInt();
+
             if (usersGuess == randomNumber){
                 guessed = true;
                 System.out.println("Congratulations, you guessed it!");
             }
-            else if( Math.abs(randomNumber - usersGuess) <= 10){
+            else if( Math.abs(randomNumber - usersGuess) <= 10){//if it is close
                 if (randomNumber > usersGuess)
                     System.out.println("close but low, try again…");
                 else 

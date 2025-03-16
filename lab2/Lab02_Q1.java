@@ -5,11 +5,12 @@ import java.util.Scanner;
 public class Lab02_Q1 {
     public static void main(String[] args) {
         final double PAL = 1.4; //constant value of physical activity level
+        final double percentCarbs = 0.45; 
+        final double percentProtein = 0.25;
+        final double percentFat = 0.3;
+
         int weight, height, age; //variables required for calories
         double bmr, calExpenditure; //calculating with given variables(above) also bmr is Basal metabolic rate
-        double percentCarbs = 0.45; 
-        double percentProtein = 0.25;
-        double percentFat = 0.3;
         double gramCarbs, gramProtein, gramFat; //outputs
 
         //input data from user
@@ -36,6 +37,7 @@ public class Lab02_Q1 {
         System.out.println("GRAMS CARBS " + gramCarbs ); */
 
         //but i chose to print with printf in order to change the number of decimals after "." 
-        System.out.printf("Calories Required: %.2f\nGRAMS PROTEIN: %.2f\nGRAMS FAT: %.2f\nGRAMS CARBS: %.2f\n",calExpenditure, gramProtein, gramFat, gramCarbs);
+        System.out.printf("%30s %10.2f\n%30s %10.2f\n%30s %10.2f\n%30s %10.2f\n",
+        "Calories Required:",calExpenditure, "GRAMS PROTEIN:", gramProtein, "GRAMS FAT:", gramFat, "GRAMS CARBS:", gramCarbs);
     }
 }

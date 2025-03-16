@@ -56,7 +56,9 @@ public class Lab03_Q3_Revision {
             else if (selected == 3){
                 System.out.print("Enter the movie name that you want to edit: ");
                 addDeleteMovieReview = input.nextLine();
-                if (movieNames.contains(addDeleteMovieReview + ",") || movieNames.contains("," + addDeleteMovieReview)){
+                if (movieNames.contains("," + addDeleteMovieReview + ",") || //check if movie is in the middle
+                movieNames.indexOf(addDeleteMovieReview) == 0 && movieNames.contains(addDeleteMovieReview + ",") || //check if movie is at the beginning
+                movieNames.indexOf(addDeleteMovieReview) + addDeleteMovieReview.length() == movieNames.length() && movieNames.contains("," + addDeleteMovieReview)){
                     System.out.print("Enter the movie's new name: ");
                     editMovie = input.nextLine();
                     movieNames = movieNames.substring(0,movieNames.indexOf(addDeleteMovieReview)) + editMovie + movieNames.substring(movieNames.indexOf(addDeleteMovieReview) + addDeleteMovieReview.length());
@@ -68,13 +70,15 @@ public class Lab03_Q3_Revision {
             }
             else if (selected == 4){
                 System.out.println("Logged out successfully");
-            }//maybe adding there is no selection in else case
+            }
+            else
+                System.out.println("wrong choice selected");
         }
         //users part
         else if(users.contains(userName + "#" + password)){
             System.out.print("Welcome! Your role is User.\n1 - List Movies and Reviews\n2 - Submit a Review\n3 - Logout\nSelect an operation: ");
             selected = input.nextInt();
-            addDeleteMovieReview = input.nextLine();// to not end the programme
+            input.nextLine();// to not end the programme
             if (selected == 1){
                 System.out.print(movieNames + "\n" + reviews);
             }
@@ -100,7 +104,9 @@ public class Lab03_Q3_Revision {
             }
             else if (selected == 3){
                 System.out.println("Logged out successfully");
-            }//maybe adding there is no selection for else case
+            }
+            else
+                System.out.println("wrong choice selected");
         }
         else //non user nor admin
             System.out.println("You shall not pass!");

@@ -4,29 +4,29 @@ import java.util.Scanner;
 
 public class Lab02_Q2 {
     public static void main(String[] args) {
-        String PhoneNumber;//input
+        String phoneNumber;//input
         String countryCode, cityCode, phoneCode; //outputs
         int firstDash, secondDash; //because I want to use firstDash's and secondDash's indexes more than one time I want to assign them to a variable
 
         //scanning input phone number
         Scanner in = new Scanner(System.in);
         System.out.print("Enter phone number: ");
-        PhoneNumber = in.nextLine();
+        phoneNumber = in.nextLine();
         in.close();
 
         //make the phone number more condensed by deleting spaces
-        PhoneNumber = PhoneNumber.replaceAll(" ", "");
+        phoneNumber = phoneNumber.replaceAll(" ", "");
 
         //finding country code by using "(" and ")" 
-        countryCode = PhoneNumber.substring(PhoneNumber.indexOf("(") + 1, PhoneNumber.indexOf(")"));
+        countryCode = phoneNumber.substring(phoneNumber.indexOf("(") + 1, phoneNumber.indexOf(")"));
 
         //finding city code by using ")" and first dash 
-        firstDash = PhoneNumber.indexOf("-");
-        cityCode = PhoneNumber.substring(PhoneNumber.indexOf(")") + 1, firstDash);
+        firstDash = phoneNumber.indexOf("-");
+        cityCode = phoneNumber.substring(phoneNumber.indexOf(")") + 1, firstDash);
 
         //finding phone code by using first dash and second dash 
-        secondDash = PhoneNumber.indexOf("-",firstDash+1);
-        phoneCode = PhoneNumber.substring(firstDash+1, firstDash+4) + " - " + PhoneNumber.substring(secondDash+1,secondDash+3) + " " + PhoneNumber.substring(secondDash+3, PhoneNumber.length());
+        secondDash = phoneNumber.indexOf("-", firstDash + 1);
+        phoneCode = phoneNumber.substring(firstDash + 1, firstDash + 4) + " - " + phoneNumber.substring(secondDash + 1,secondDash + 3) + " " + phoneNumber.substring(secondDash + 3);
 
         //print part
         System.out.println("Country Code: " + countryCode);
