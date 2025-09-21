@@ -5,12 +5,12 @@ public class MovieTicketSystem {
     //shortcut for print selection list
     public static void printlist(){
         System.out.print("\n1. List Movies \n" +
-                                "2. List Screenings \n" +
-                                "3. Add Screening \n" +
-                                "4. Buy Ticket \n" +
-                                "5. Calculate Revenue \n" +
-                                "6. Exit \n" +
-                                "Enter your option: ");
+                            "2. List Screenings \n" +
+                            "3. Add Screening \n" +
+                            "4. Buy Ticket \n" +
+                            "5. Calculate Revenue \n" +
+                            "6. Exit \n" +
+                            "Enter your option: ");
     }
     //shortcut for print error
     public static void printerror(){
@@ -336,5 +336,6 @@ public class MovieTicketSystem {
             }
         }
         System.out.println("Exiting...");
+        scanner.close();
     }
 }
